@@ -59,7 +59,7 @@ def runtest(args, verbose = True):
   print(f"collision: {collision}")
 
   pathlength = np.sum(np.sqrt(np.sum(np.diff(path,axis=0)**2,axis=1)))
-  plt.savefig(f"./fig/{args.map}_{args.plan}_{args.res}_{args.eps}.png")
+  # plt.savefig(f"./fig/{args.map}_{args.plan}_{args.res}_{args.eps}.png")
   result = f"{args.map}, {args.res}, {args.eps}, {args.plan}, {time_spent}, {pathlength}, {num_considered_node}, {success}\n"
 
   with open("log.txt", "a") as f:
@@ -67,70 +67,9 @@ def runtest(args, verbose = True):
 
   return success, pathlength
 
-def test_single_cube(args, verbose = True):
-  print('Running single cube test...\n') 
-  success, pathlength = runtest(args, verbose)
-  print(f"Success: {success}")
-  print(f"Path length: {pathlength}")
-  
-def test_maze(args, verbose = True):
-  print('Running maze test...\n') 
-  success, pathlength = runtest(args, verbose)
-  print(f"Success: {success}")
-  print(f"Path length: {pathlength}")
-  
-def test_window(args, verbose = True):
-  print('Running window test...\n') 
-  success, pathlength = runtest(args, verbose)
-  print(f"Success: {success}")
-  print(f"Path length: {pathlength}")
-  
-def test_tower(args, verbose = True):
-  print('Running tower test...\n') 
-  success, pathlength = runtest(args, verbose)
-  print(f"Success: {success}")
-  print(f"Path length: {pathlength}")
-     
-def test_flappy_bird(args, verbose = True):
-  print('Running flappy bird test...\n') 
-  success, pathlength = runtest(args, verbose)
-  print(f"Success: {success}")
-  print(f"Path length: {pathlength}")
-
-def test_room(args, verbose = True):
-  print('Running room test...\n') 
-  success, pathlength = runtest(args, verbose)
-  print(f"Success: {success}")
-  print(f"Path length: {pathlength}")
-
-def test_monza(args, verbose = True):
-  print('Running monza test...\n')
-  success, pathlength = runtest(args, verbose)
-  print(f"Success: {success}")
-  print(f"Path length: {pathlength}")
-
 def wrap_test(args):
-  if args.map == "single_cube":
-    test_single_cube(args)
-
-  elif args.map == "maze":
-    test_maze(args)
-
-  elif args.map == "window":
-    test_window(args)
-
-  elif args.map == "tower":
-    test_tower(args)
-
-  elif args.map == "flappy_bird":
-    test_flappy_bird(args)
-
-  elif args.map == "room":
-    test_room(args)
-  
-  elif args.map == "monza":
-    test_monza(args)
-  
-  else:
-    print("Invalid input!")
-
+  verbose = True
+  print(f"Running {args.map} test...\n")
+  success, pathlength = runtest(args, verbose)
+  print(f"Success: {success}")
+  print(f"Path length: {pathlength}")
