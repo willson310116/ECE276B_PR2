@@ -33,7 +33,16 @@ python main.py --map tower --plan RRT
 - **Collision.py**: Collision detection algorithm.
 - **testmap.py**: Functions for testing.
 - **utils.py**: Functions for file loading, env plotting, parsing args commands.
-- **astar.py**: Given astar algorithm template (not used).
+
+## Some results
+- AStar with epsilon=1
+![plot](./assets/A*1.png)
+- AStar with epsilon=5
+![plot](./assets/A*5.png)
+- RRT
+![plot](./assets/RRT.png)
+
+Other results can be found in [report.pdf](./report.pdf)
 
 
 ## Reference
