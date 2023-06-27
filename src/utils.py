@@ -30,37 +30,37 @@ def get_map_config(name):
     if name == "single_cube":
         start = np.array([2.3, 2.3, 1.3])
         goal = np.array([7.0, 7.0, 5.5])
-        map_file = "./maps/single_cube.txt"
+        map_file = "../maps/single_cube.txt"
 
     elif name == "maze":
         start = np.array([0.0, 0.0, 1.0])
         goal = np.array([12.0, 12.0, 5.0])
-        map_file = "./maps/maze.txt"
+        map_file = "../maps/maze.txt"
 
     elif name == "window":
         start = np.array([0.2, -4.9, 0.2])
         goal = np.array([6.0, 18.0, 3.0])
-        map_file = "./maps/window.txt"
+        map_file = "../maps/window.txt"
 
     elif name == "tower":
         start = np.array([2.5, 4.0, 0.5])
         goal = np.array([4.0, 2.5, 19.5])
-        map_file = "./maps/tower.txt"
+        map_file = "../maps/tower.txt"
 
     elif name == "flappy_bird":
         start = np.array([0.5, 2.5, 5.5])
         goal = np.array([19.0, 2.5, 5.5])
-        map_file = "./maps/flappy_bird.txt"
+        map_file = "../maps/flappy_bird.txt"
 
     elif name == "room":
         start = np.array([1.0, 5.0, 1.5])
         goal = np.array([9.0, 7.0, 1.5])
-        map_file = "./maps/room.txt"
+        map_file = "../maps/room.txt"
     
     elif name == "monza":
         start = np.array([0.5, 1.0, 4.9])
         goal = np.array([3.8, 1.0, 0.1])
-        map_file = "./maps/monza.txt"
+        map_file = "../maps/monza.txt"
     
     else:
         print("Invalid input!")
